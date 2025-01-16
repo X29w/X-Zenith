@@ -1,6 +1,7 @@
 import { colors, fontSize } from '@/constants/tokens'
 import { StyleSheet } from 'react-native'
 
+/** Default Styles */
 export const defaultStyles = StyleSheet.create({
 	container: {
 		flex: 1,
@@ -12,7 +13,7 @@ export const defaultStyles = StyleSheet.create({
     }
 })
 
-
+/** Utils Styles */
 export const utilsStyles = StyleSheet.create({
 
 })

@@ -1,4 +1,4 @@
-/** 主题颜色 */
+/** Theme Colors */
 export const colors = {
 	primary: '#fc3c44',
 	background: '#000',
@@ -9,6 +9,7 @@ export const colors = {
 	minimumTrackTintColor: 'rgba(255,255,255,0.6)',
 } as const
 
+/** Font Size */
 export const fontSize = {
 	xs: 12,
 	sm: 16,
@@ -16,6 +17,7 @@ export const fontSize = {
 	lg: 24,
 } as const
 
+/**  */
 export const screenPadding = {
 	horizontal: 20,
 } as const

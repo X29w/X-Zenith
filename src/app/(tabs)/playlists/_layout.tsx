@@ -1,3 +1,4 @@
+import { StackScreenWithSearchBar } from '@/constants/layout'
 import { defaultStyles } from '@/styles'
 import { Stack } from 'expo-router'
 import type { FC } from 'react'
@@ -9,7 +10,10 @@ const PlaylistsLayout: FC<PlaylistsLayoutProps> = () => {
 	return (
 		<View style={defaultStyles.container}>
 			<Stack>
-				<Stack.Screen name="index" options={{ headerTitle: 'Playlists' }} />
+				<Stack.Screen
+					name="index"
+					options={{ ...StackScreenWithSearchBar, headerTitle: 'Playlists' }}
+				/>
 			</Stack>
 		</View>
 	)
