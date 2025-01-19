@@ -1,17 +1,17 @@
-import { ReactNode, type FC } from 'react'
+import { ReactNode, type FC } from 'react';
 
 interface ConditionalRenderProps {
 	/** the condition to render */
-	condition: boolean
+	condition: boolean;
 
 	/** rendered when condition is true  */
-	children: ReactNode
+	children: ReactNode;
 
 	/** rendered when condition is false */
-	fallback?: ReactNode
+	fallback?: ReactNode;
 }
 
 const ConditionalRender: FC<ConditionalRenderProps> = ({ condition = true, children, fallback }) =>
-	condition ? children : fallback
+	condition ? children : fallback;
 
-export default ConditionalRender
+export default ConditionalRender;

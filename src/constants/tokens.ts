@@ -7,7 +7,7 @@ export const colors = {
 	icon: '#fff',
 	maximumTrackTintColor: 'rgba(255,255,255,0.4)',
 	minimumTrackTintColor: 'rgba(255,255,255,0.6)',
-} as const
+} as const;
 
 /** Font Size */
 export const fontSize = {
@@ -15,9 +15,9 @@ export const fontSize = {
 	sm: 16,
 	base: 20,
 	lg: 24,
-} as const
+} as const;
 
 /**  */
 export const screenPadding = {
 	horizontal: 20,
-} as const
+} as const;

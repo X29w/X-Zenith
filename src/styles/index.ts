@@ -1,5 +1,5 @@
-import { colors, fontSize } from '@/constants/tokens'
-import { StyleSheet } from 'react-native'
+import { colors, fontSize } from '@/constants/tokens';
+import { StyleSheet } from 'react-native';
 
 /** Default Styles */
 export const defaultStyles = StyleSheet.create({
@@ -11,7 +11,7 @@ export const defaultStyles = StyleSheet.create({
 		fontSize: fontSize.base,
 		color: colors.text,
 	},
-})
+});
 
 /** Utils Styles */
 export const utilsStyles = StyleSheet.create({
@@ -20,4 +20,4 @@ export const utilsStyles = StyleSheet.create({
 		borderWidth: StyleSheet.hairlineWidth,
 		opacity: 0.3,
 	},
-})
+});

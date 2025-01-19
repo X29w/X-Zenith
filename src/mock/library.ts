@@ -105,4 +105,4 @@ export const library = [
 		artist: 'Ryan McCaffrey',
 		playlist: ['Chill 🌱'],
 	},
-]
+];

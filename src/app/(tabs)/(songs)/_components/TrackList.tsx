@@ -1,17 +1,15 @@
-import type { FC } from 'react'
-import { FlatList, FlatListProps } from 'react-native'
-import TrackItem from './TrackItem'
-import { library } from '@/mock/library'
-import ItemDivider from './ItemDivider'
+import type { FC } from 'react';
+import { FlatList, FlatListProps } from 'react-native';
+import TrackItem from './TrackItem';
+import { library } from '@/mock/library';
+import ItemDivider from './ItemDivider';
+import { Track } from 'react-native-track-player';
 
-interface TracksListProps extends Partial<FlatListProps<unknown>> {
-	tracks: any[]
+interface TracksListProps extends Partial<FlatListProps<Track>> {
+	tracks: Track[];
 }
 
 const TracksList: FC<TracksListProps> = ({ tracks, ...flatListProps }) => {
-	console.log("tracks",tracks)
-	
-	
 	return (
 		<FlatList
 			data={tracks}
@@ -21,12 +19,10 @@ const TracksList: FC<TracksListProps> = ({ tracks, ...flatListProps }) => {
 			}}
 			ItemSeparatorComponent={ItemDivider}
 			ListFooterComponent={ItemDivider}
-			renderItem={({ item }) => (
-				<TrackItem title={item.title} artist={item.artist} image={item.artwork} />
-			)}
+			renderItem={({ item: track }) => <TrackItem track={track} />}
 			{...flatListProps}
 		/>
-	)
-}
+	);
+};
 
-export default TracksList
+export default TracksList;

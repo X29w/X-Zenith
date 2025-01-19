@@ -1,25 +1,24 @@
-import ConditionalRender from '@/components/ConditionRender'
-import { unknownTrackImageUri } from '@/constants/images'
-import { colors, fontSize } from '@/constants/tokens'
-import { defaultStyles } from '@/styles'
-import type { FC } from 'react'
-import { Image, StyleSheet, Text, TouchableHighlight, View } from 'react-native'
+import ConditionalRender from '@/components/ConditionRender';
+import { unknownTrackImageUri } from '@/constants/images';
+import { colors, fontSize } from '@/constants/tokens';
+import { defaultStyles } from '@/styles';
+import type { FC } from 'react';
+import { Image, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { Track } from 'react-native-track-player';
 
 interface TrackItemProps {
-	title: string
-	image?: string
-	artist?: string
+	track: Track;
 }
 
-const TrackItem: FC<TrackItemProps> = ({ title, image, artist }) => {
-	const isActive = false
+const TrackItem: FC<TrackItemProps> = ({ track }) => {
+	const isActive = false;
 	return (
 		<TouchableHighlight>
 			<View style={styles.trackItemContainer}>
 				<View>
 					<Image
 						source={{
-							uri: image ?? unknownTrackImageUri,
+							uri: track?.artwork ?? unknownTrackImageUri,
 						}}
 						style={{
 							...styles.trackArtworkImage,
@@ -32,19 +31,19 @@ const TrackItem: FC<TrackItemProps> = ({ title, image, artist }) => {
 					<Text
 						style={{ ...styles.trackTitleText, color: isActive ? colors.primary : colors.text }}
 					>
-						{title}
+						{track?.title}
 					</Text>
 
-					<ConditionalRender condition={!!artist}>
+					<ConditionalRender condition={!!track?.artist}>
 						<Text numberOfLines={1} style={{ ...styles.trackArtistText }}>
-							{artist}
+							{track?.artist}
 						</Text>
 					</ConditionalRender>
 				</View>
 			</View>
 		</TouchableHighlight>
-	)
-}
+	);
+};
 
 const styles = StyleSheet.create({
 	trackItemContainer: {
@@ -82,6 +81,6 @@ const styles = StyleSheet.create({
 		fontSize: 14,
 		marginTop: 4,
 	},
-})
+});
 
-export default TrackItem
+export default TrackItem;

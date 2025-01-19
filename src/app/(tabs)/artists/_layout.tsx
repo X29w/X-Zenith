@@ -1,8 +1,8 @@
-import { StackScreenWithSearchBar } from '@/constants/layout'
-import { defaultStyles } from '@/styles'
-import { Stack } from 'expo-router'
-import type { FC } from 'react'
-import { View } from 'react-native'
+import { StackScreenWithSearchBar } from '@/constants/layout';
+import { defaultStyles } from '@/styles';
+import { Stack } from 'expo-router';
+import type { FC } from 'react';
+import { View } from 'react-native';
 
 interface ArtistsLayoutProps {}
 
@@ -16,7 +16,7 @@ const ArtistsLayout: FC<ArtistsLayoutProps> = () => {
 				/>
 			</Stack>
 		</View>
-	)
-}
+	);
+};
 
-export default ArtistsLayout
+export default ArtistsLayout;
