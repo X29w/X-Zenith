@@ -6,14 +6,18 @@ export const defaultStyles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: colors.background,
-    },
-    text: {
-        fontSize: fontSize.base,
-        color:colors.text
-    }
+	},
+	text: {
+		fontSize: fontSize.base,
+		color: colors.text,
+	},
 })
 
 /** Utils Styles */
 export const utilsStyles = StyleSheet.create({
-
+	itemSeparator: {
+		borderColor: colors.textMuted,
+		borderWidth: StyleSheet.hairlineWidth,
+		opacity: 0.3,
+	},
 })

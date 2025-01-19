@@ -19,11 +19,11 @@ const TabsLayout: FC<unknown> = () => (
 				borderTopLeftRadius: 20,
 				borderTopRightRadius: 20,
 				borderTopWidth: 0,
-				paddingTop: 8,
+				paddingHorizontal: 8,
 			},
 			tabBarBackground: () => (
 				<BlurView
-					intensity={95}
+					intensity={80}
 					style={{
 						...StyleSheet.absoluteFillObject,
 						overflow: 'hidden',
